@@ -23,15 +23,17 @@ console.log(prezzo_s_over65)
 //     5.1 se ho meno di 18 anni
 //     5.2 se ho 65 anni o più
 //     5.3 se non ho ditirro allo sconto (18-64)
+let prezzo_finito
+
 if (eta < 18) {
-    let prezzo_finito = prezzo_intero - prezzo_s_minori
+    prezzo_finito = prezzo_intero - prezzo_s_minori
 }
 
 else if (eta >= 65) {
-    let prezzo_finito = prezzo_intero - Prezzo_s_over65
+    prezzo_finito = prezzo_intero - Prezzo_s_over65
 }
 
 else {
-    let prezzo_finito = prezzo_intero
+    prezzo_finito = prezzo_intero
 }
 // 6. Display del pezzo finito
