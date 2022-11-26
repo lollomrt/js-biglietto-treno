@@ -30,10 +30,12 @@ if (eta < 18) {
 }
 
 else if (eta >= 65) {
-    prezzo_finito = prezzo_intero - Prezzo_s_over65
+    prezzo_finito = prezzo_intero - prezzo_s_over65
 }
 
 else {
     prezzo_finito = prezzo_intero
 }
 // 6. Display del pezzo finito
+
+document.getElementById("prezzo-finito").innerHTML = prezzo_finito + "€"
