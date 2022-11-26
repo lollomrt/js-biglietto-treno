@@ -1,5 +1,5 @@
 // 1. Dare la possibilità di inserire il numero di klometri
-const prezzo_km = parseInt(prompt("quanti km devi fare?"));
+const prezzo_km = parseFloat(prompt("quanti km devi fare?"));
 console.log(prezzo_km)
 
 // 2. Dare la possibilità di inserire età
@@ -7,16 +7,16 @@ const eta = parseInt(prompt("quanti anni hai?"));
 console.log(eta)
 
 // 3. Definisco il rezzo del biglietto senza sconti moltiplicando 0.20€ per il numero di km
-const prezzo_intero = prezzo_km * 0.2;
+const prezzo_intero = parseFloat(prezzo_km * 0.21);
 console.log(prezzo_intero)
 
 // 4. determinare il prezzo finale sottraendo lo sconto età al prezzo intero
 //     4.1 calcolare lo sconto per i minori di 18 anni - 20%
-const prezzo_s_minori = prezzo_intero * 20 / 100;
+const prezzo_s_minori = parseFloat(prezzo_intero * 20 / 100);
 console.log(prezzo_s_minori)
 
 //     4.2 calcolare sconto per gli over 65 - 40%
-const prezzo_s_over65 = prezzo_intero * 40 / 100;
+const prezzo_s_over65 = parseFloat(prezzo_intero * 40 / 100);
 console.log(prezzo_s_over65)
 
 // 5. Determinare le condizioni affinchè venga calcolato un prezzo piuttosto che un altro
@@ -38,4 +38,4 @@ else {
 }
 // 6. Display del pezzo finito
 
-document.getElementById("prezzo-finito").innerHTML = prezzo_finito + "€"
+document.getElementById("prezzo-finito").innerHTML = prezzo_finito.toFixed(2) + "€"
